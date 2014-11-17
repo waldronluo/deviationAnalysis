@@ -1,7 +1,6 @@
 function data = MCDataDev (dataCollectPath)
 %  Struct: data1, data2, data3 ... dataN, label
-%  data1, data2, data3 are exemplars.
-%  Here, [data1, data2, data3] = [MyR, MzR, FxA]
+
     FcLLB = loadLLBData ('..', 'FC');
     expLLB = loadLLBData('..', 'exp');
 
@@ -41,16 +40,16 @@ function data = MCDataDev (dataCollectPath)
 
         if (labelNum == 1)   labelNum = 1;                        %+x
         elseif (labelNum == 2) labelNum = 2;                    %+y
-        elseif (labelNum == 3) continue; labelNum = 3;          %+x+y
-        elseif (labelNum == 4) labelNum = 2;                    %-y
-        elseif (labelNum == 5) continue; labelNum = 5;          %+x-y
-        elseif (labelNum == 8) labelNum = 3;          %+0
-        elseif (labelNum == 9) continue; labelNum = 7;          %+x+0
-        elseif (labelNum == 10) continue; labelNum = 8;         %+y+0
-        elseif (labelNum == 11)labelNum = 4;         %+x+y+0
-        elseif (labelNum == 12) continue; labelNum = 10;         %-y+0
-        elseif (labelNum == 16)labelNum = 3;         %-0
-        elseif (labelNum == 17) continue; labelNum = 12;   %+x-0
+        elseif (labelNum == 4) labelNum = 3;                    %-y
+        elseif (labelNum == 8) labelNum = 4;          %+0
+        elseif (labelNum == 16)labelNum = 5;         %-0
+        elseif (labelNum == 3) labelNum = 6;          %+x+y
+        elseif (labelNum == 5) labelNum = 7;          %+x-y
+        elseif (labelNum == 9) labelNum = 8;          %+x+0
+        elseif (labelNum == 17) labelNum = 9;   %+x-0
+        elseif (labelNum == 10) labelNum = 10;         %+y+0
+        elseif (labelNum == 12) labelNum = 11;         %-y+0
+        elseif (labelNum == 11) labelNum = 12;         %+x+y+0
         end
 
         %====================================

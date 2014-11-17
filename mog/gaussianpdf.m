@@ -1,8 +1,9 @@
 
-function p = gaussianpdf (model, x)
+function p = gaussianpdf (model, x, against)
 % This function gives out p(y|x).
-% pxydf is a vector contains p(x|y) of different y
-% p is p (y|x) also of different y
+% pxydf is p(x|y)
+% p is p (y|x)
+
     p = [];
     pxydf = [];
     for i = 1:size(model.mu, 1)
@@ -10,10 +11,9 @@ function p = gaussianpdf (model, x)
     end
 
     %pxydf
-    for i = 1:size(model.mu, 1)
-        p = [p, pxydf(i) * model.phi(i) / (pxydf * model.phi)];
+    for i = 1:size(against, 2)
+        p = [p, pxydf(against(i)) * model.phi(against(i)) / (pxydf(against) * model.phi(against))];
     end
-
 
 end
 

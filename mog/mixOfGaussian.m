@@ -1,10 +1,4 @@
 function model = mixOfGaussian (data)
-%===============================================================
-% This function is used to build gaussian
-% model. It contains
-% .n The number of different training cases of different classes
-% .mu The mean number of training cases
-% .cov The covarience matrix of training cases of different classes
 
 dataDim = size(data, 2) - 1;
 classNum = max (data(:,end));
